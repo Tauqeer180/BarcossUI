@@ -80,7 +80,7 @@ export default function Home() {
               return  <div className="d-flex my-2">
                   <img
                     width="60px"
-                    src="https://cdn.shopify.com/s/files/1/0318/4335/2712/products/39_635X700_crop_center.jpg?v=1589806188"
+                    src={require('../Images/Products/IMG_3799.JPG')}
                   />
                   <div className="ms-2">
                     <div className="fs-6">Shoes Title 1 Title</div>
@@ -105,7 +105,7 @@ export default function Home() {
                     <div className="d-flex">
                       <img
                         width="60px"
-                        src="https://cdn.shopify.com/s/files/1/0318/4335/2712/products/39_635X700_crop_center.jpg?v=1589806188"
+                        src={require('../Images/Products/IMG_3798.JPG')}
                       />
                       <div className="ms-2">
                         <div className="fw-bold">Shoes Title  1 Title</div>
@@ -115,7 +115,7 @@ export default function Home() {
                     <div className="d-flex">
                       <img
                         width="60px"
-                        src="https://cdn.shopify.com/s/files/1/0318/4335/2712/products/39_635X700_crop_center.jpg?v=1589806188"
+                        src={require('../Images/Products/IMG_3799.JPG')}
                       />
                       <div className="ms-2">
                         <div className="fw-bold">Shoes Title  2 Title</div>
@@ -125,7 +125,7 @@ export default function Home() {
                     <div className="d-flex">
                       <img
                         width="60px"
-                        src="https://cdn.shopify.com/s/files/1/0318/4335/2712/products/39_635X700_crop_center.jpg?v=1589806188"
+                        src={require('../Images/Products/IMG_3800.JPG')}
                       />
                       <div className="ms-2">
                         <div className="fw-bold">Shoes Title  3 Title</div>
@@ -135,7 +135,7 @@ export default function Home() {
                     <div className="d-flex">
                       <img
                         width="60px"
-                        src="https://cdn.shopify.com/s/files/1/0318/4335/2712/products/39_635X700_crop_center.jpg?v=1589806188"
+                        src={require('../Images/Products/IMG_3802.JPG')}
                       />
                       <div className="ms-2">
                         <div className="fw-bold">Shoes Title  4 Title</div>
@@ -145,7 +145,7 @@ export default function Home() {
                     <div className="d-flex">
                       <img
                         width="60px"
-                        src="https://cdn.shopify.com/s/files/1/0318/4335/2712/products/39_635X700_crop_center.jpg?v=1589806188"
+                        src={require('../Images/Products/IMG_3803.JPG')}
                       />
                       <div className="ms-2">
                         <div className="fw-bold">Shoes Title  5 Title</div>
@@ -155,7 +155,7 @@ export default function Home() {
                     <div className="d-flex">
                       <img
                         width="60px"
-                        src="https://cdn.shopify.com/s/files/1/0318/4335/2712/products/39_635X700_crop_center.jpg?v=1589806188"
+                        src={require('../Images/Products/IMG_3798.JPG')}
                       />
                       <div className="ms-2">
                         <div className="fw-bold">Shoes Title  6 Title</div>
@@ -168,7 +168,7 @@ export default function Home() {
             </div>
             <div className="row">
               <h3 className="mt-5">Our Products</h3>
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((d) => {
+              {["IMG_3798.JPG", 2, 3, 4, 5, 6, 7, 8, 9].map((d) => {
                 return (
                   <div className="col-md-3">
                     <Card
@@ -176,7 +176,7 @@ export default function Home() {
                       cover={
                         <img
                           alt="example"
-                          src="https://cdn.shopify.com/s/files/1/0318/4335/2712/products/39_635X700_crop_center.jpg?v=1589806188"
+                          src={require('../Images/Products/IMG_3798.JPG')}
                         />
                       }
                       actions={[
@@ -199,4 +199,13 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+export async function getProduct(data) {
+  const response = await fetch(`/api/Product/GetAllProducts`, {
+      method: 'GET',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({user: data})
+    })
+  return await response.json();
 }
