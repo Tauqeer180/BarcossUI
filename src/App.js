@@ -18,6 +18,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Product from "./pages/Product";
 import CustomProduct from "./pages/CustomProduct";
+import Footer from "./components/Footer";
 function App() {
   const history = useHistory();
   return (
@@ -39,6 +40,7 @@ function App() {
             />
             <Route exact path="/" render={() => <Home />} />
           </Switch>
+          <Footer />
         </BrowserRouter>
       </div>
     </div>
