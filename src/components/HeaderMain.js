@@ -63,7 +63,7 @@ export default function HeaderMain() {
             </span>
             <span>
               <Link to="/cart">
-                <Button 
+                <Button
                   className="border-0 shadow-0"
                   icon={<ShoppingCartOutlined className="fs-2" />}
                 >
@@ -86,23 +86,31 @@ export default function HeaderMain() {
           <Menu.Item key="two">Shoes</Menu.Item>
         </Menu.SubMenu>
         <Menu.SubMenu key="SubMenu1" title="Home">
-          <Menu.Item key="two">Home</Menu.Item>
-          <Menu.Item key="three">Shop</Menu.Item>
+          <Link to="/">
+            <Menu.Item key="two">Home</Menu.Item>
+          </Link>
+          <Link to="/Shop">
+            <Menu.Item key="three">Shop</Menu.Item>
+          </Link>
           <Menu.ItemGroup title="Item Group">
             <Menu.Item key="four">Navigation Four</Menu.Item>
             <Menu.Item key="five">Navigation Five</Menu.Item>
           </Menu.ItemGroup>
         </Menu.SubMenu>
         <Menu.SubMenu key="SubMenu2" title="Shop">
-          <Menu.Item key="two">Home</Menu.Item>
-          <Menu.Item key="three">Shop</Menu.Item>
-          <Menu.ItemGroup title="Item Group">
-            <Menu.Item key="four">Navigation Four</Menu.Item>
-            <Menu.Item key="five">Navigation Five</Menu.Item>
-          </Menu.ItemGroup>
+          <Link to="/">
+            <Menu.Item key="two">Home</Menu.Item>
+          </Link>
+          <Link to="/">
+            <Menu.Item key="three">Shop</Menu.Item>
+          </Link>
         </Menu.SubMenu>
-        <Menu.SubMenu key="SubMenu3" title="Contact US"></Menu.SubMenu>
-        <Menu.SubMenu key="SubMenu4" title="About"></Menu.SubMenu>
+        <Link to="/contactus">
+          <Menu.SubMenu key="SubMenu3" title="Contact US"></Menu.SubMenu>
+        </Link>
+        <Link to="/about">
+          <Menu.SubMenu key="SubMenu4" title="About" ></Menu.SubMenu>
+        </Link>
       </Menu>
     </div>
   );

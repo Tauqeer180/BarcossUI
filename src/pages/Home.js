@@ -7,6 +7,11 @@ import {
 import { Carousel as AntdCarousel, Card, Avatar, Button, Rate } from "antd";
 import React from "react";
 import Carousel from "react-multi-carousel";
+import img1 from '../Images/Products/IMG_3798.JPG'
+import img2 from '../Images/Products/IMG_3799.JPG'
+import img4 from '../Images/Products/IMG_3802.JPG'
+import img3 from '../Images/Products/IMG_3800.JPG'
+import img5 from '../Images/Products/IMG_3803.JPG'
 const { Meta } = Card;
 const responsive = {
   desktop: {
@@ -22,6 +27,24 @@ const responsive = {
     items: 2,
   },
 };
+const productsList=[
+  {
+  image: img1
+},
+  {
+  image: img2
+},
+  {
+  image: img3
+},
+  {
+  image: img4
+},
+  {
+  image: img5
+},
+ 
+]
 export default function Home() {
   return (
     <div>
@@ -76,11 +99,12 @@ export default function Home() {
             <div className="mt-4">
               <p className="fs-16 fw-bold mb-1">Features Collection</p>
               <hr className="my-2 text-darkYellow opacity-100" />
-              {[1, 2, 3, 4, 5].map((d) => {
+              {productsList.map((d) => {
               return  <div className="d-flex my-2">
                   <img
-                    width="60px"
-                    src={require('../Images/Products/IMG_3799.JPG')}
+                    width="70px"
+                    height="70px"
+                    src={d.image}
                   />
                   <div className="ms-2">
                     <div className="fs-6">Shoes Title 1 Title</div>
@@ -168,7 +192,7 @@ export default function Home() {
             </div>
             <div className="row">
               <h3 className="mt-5">Our Products</h3>
-              {["IMG_3798.JPG", 2, 3, 4, 5, 6, 7, 8, 9].map((d) => {
+              {productsList.map((d) => {
                 return (
                   <div className="col-md-3">
                     <Card
@@ -176,7 +200,7 @@ export default function Home() {
                       cover={
                         <img
                           alt="example"
-                          src={require('../Images/Products/IMG_3798.JPG')}
+                          src={d.image}
                         />
                       }
                       actions={[
