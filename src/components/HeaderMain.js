@@ -30,7 +30,8 @@ export default function HeaderMain() {
         <div className="row p-3">
           <div className="col-sm-2">
             <img
-              src="https://cdn.shopify.com/s/files/1/0318/4335/2712/files/logo_e2abf572-4917-4190-8e9c-bed56adfbc3f.png?v=1613731623"
+            width={150}
+              src={require('../Images/Logo/BarcossLogo.png')}
               className="img img-fluid"
             />
           </div>
@@ -83,7 +84,9 @@ export default function HeaderMain() {
           title="Browse Category"
           icon={<DownOutlined />}
         >
+          <Link  to='/'>
           <Menu.Item key="two">Shoes</Menu.Item>
+          </Link>
         </Menu.SubMenu>
         <Menu.SubMenu key="SubMenu1" title="Home">
           <Link to="/">
@@ -92,22 +95,15 @@ export default function HeaderMain() {
           <Link to="/Shop">
             <Menu.Item key="three">Shop</Menu.Item>
           </Link>
-          <Menu.ItemGroup title="Item Group">
-            <Menu.Item key="four">Navigation Four</Menu.Item>
-            <Menu.Item key="five">Navigation Five</Menu.Item>
-          </Menu.ItemGroup>
         </Menu.SubMenu>
-        <Menu.SubMenu key="SubMenu2" title="Shop">
-          <Link to="/">
-            <Menu.Item key="two">Home</Menu.Item>
-          </Link>
-          <Link to="/">
-            <Menu.Item key="three">Shop</Menu.Item>
-          </Link>
+         <Menu.SubMenu key="SubMenu2" title="Shop">
         </Menu.SubMenu>
+        
+          <Menu.SubMenu key="SubMenu3" title="Contact US">
+
         <Link to="/contactus">
-          <Menu.SubMenu key="SubMenu3" title="Contact US"></Menu.SubMenu>
         </Link>
+          </Menu.SubMenu>
         <Link to="/about">
           <Menu.SubMenu key="SubMenu4" title="About" ></Menu.SubMenu>
         </Link>

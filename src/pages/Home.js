@@ -204,7 +204,7 @@ export default function Home() {
                         />
                       }
                       actions={[
-                        <Button icon={<ShoppingCartOutlined />}>
+                        <Button icon={<ShoppingCartOutlined />}> 
                           Add To Cart
                         </Button>,
                       ]}
@@ -223,13 +223,4 @@ export default function Home() {
       </div>
     </div>
   );
-}
-
-export async function getProduct(data) {
-  const response = await fetch(`/api/Product/GetAllProducts`, {
-      method: 'GET',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({user: data})
-    })
-  return await response.json();
 }
