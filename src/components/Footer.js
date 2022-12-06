@@ -2,7 +2,7 @@ import { HomeOutlined, MobileOutlined } from "@ant-design/icons";
 import React from "react";
 export default function Footer() {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid footer-bg">
       <div className="row p-4 ">
         <div className="col">
           <img src="https://cdn.shopify.com/s/files/1/0318/4335/2712/files/logo_e2abf572-4917-4190-8e9c-bed56adfbc3f.png?v=1613731623" />

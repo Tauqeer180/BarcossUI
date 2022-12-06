@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Cart() {
   return (
     <div>
       <div className="container">
-        <div className="mt-5" >
-            <h2 className="text-center" >Cart</h2>
+        <div className="mt-5">
+          <h2 className="text-center">Cart</h2>
         </div>
         <div className="row">
           <div className="col-sm-12 col-md-10 offset-md-1 mt-5">
@@ -37,10 +38,7 @@ export default function Cart() {
                         <h4 className="media-heading">
                           <a href="#">Product name</a>
                         </h4>
-                        <h6 className="media-heading">
-                          {" "}
-                         Product description
-                        </h6>
+                        <h6 className="media-heading"> Product description</h6>
                         <span>Status: </span>
                         <span className="text-success">
                           <strong>In Stock</strong>
@@ -89,10 +87,7 @@ export default function Cart() {
                         <h4 className="media-heading">
                           <a href="#">Product name</a>
                         </h4>
-                        <h6 className="media-heading">
-                          {" "}
-                           Product Description
-                        </h6>
+                        <h6 className="media-heading"> Product Description</h6>
                         <span>Status: </span>
                         <span className="text-warning">
                           <strong>Leaves warehouse in 2 - 3 weeks</strong>
@@ -168,16 +163,19 @@ export default function Cart() {
                   <td>   </td>
                   <td>   </td>
                   <td>
-                    <button type="button" className="btn btn-default">
+                    {/* <Link to="/" type="button" className="btn btn-default">
                       <span className="glyphicon glyphicon-shopping-cart"></span>{" "}
                       Continue Shopping
-                    </button>
+                    </Link> */}
                   </td>
                   <td>
-                    <button type="button" className="btn btn-success">
+                    <Link
+                      to="/checkout"
+                      type="button"
+                      className="btn btn-success"
+                    >
                       Checkout{" "}
-                      <span className="glyphicon glyphicon-play"></span>
-                    </button>
+                    </Link>
                   </td>
                 </tr>
               </tbody>

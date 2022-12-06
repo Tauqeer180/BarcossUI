@@ -646,3 +646,6 @@ border-color: #ff6801;
  #customP .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
   color: #ff6801;
  }
+ .footer-bg{
+  background-color: #f3f3f3;
+ }

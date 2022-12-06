@@ -30,8 +30,8 @@ export default function HeaderMain() {
         <div className="row p-3">
           <div className="col-sm-2">
             <img
-            width={150}
-              src={require('../Images/Logo/BarcossLogo.png')}
+              width={150}
+              src={require("../Images/Logo/BarcossLogo.png")}
               className="img img-fluid"
             />
           </div>
@@ -84,29 +84,26 @@ export default function HeaderMain() {
           title="Browse Category"
           icon={<DownOutlined />}
         >
-          <Link  to='/'>
-          <Menu.Item key="two">Shoes</Menu.Item>
-          </Link>
-        </Menu.SubMenu>
-        <Menu.SubMenu key="SubMenu1" title="Home">
           <Link to="/">
-            <Menu.Item key="two">Home</Menu.Item>
-          </Link>
-          <Link to="/Shop">
-            <Menu.Item key="three">Shop</Menu.Item>
+            <Menu.Item key="two1">Shoes</Menu.Item>
           </Link>
         </Menu.SubMenu>
-         <Menu.SubMenu key="SubMenu2" title="Shop">
-        </Menu.SubMenu>
-        
-          <Menu.SubMenu key="SubMenu3" title="Contact US">
+        <Menu.Item key="SubMenu1" title="Home">
+          <Link to="/">Home</Link>
+        </Menu.Item>
+        <Menu.Item key="SubMenu2" title="Shop">
+          <Link to="/">Shop</Link>
+        </Menu.Item>
+        <Menu.Item key="SubMen222u2">
+          <Link to="/customproduct">Custom Product</Link>
+        </Menu.Item>
 
-        <Link to="/contactus">
-        </Link>
-          </Menu.SubMenu>
-        <Link to="/about">
-          <Menu.SubMenu key="SubMenu4" title="About" ></Menu.SubMenu>
-        </Link>
+        <Menu.Item key="SubMenu3" title="Contact US">
+          <Link to="/contactus">Contact Us</Link>
+        </Menu.Item>
+        <Menu.Item key="SubMenu4" title="About">
+          <Link to="/about">About</Link>
+        </Menu.Item>
       </Menu>
     </div>
   );

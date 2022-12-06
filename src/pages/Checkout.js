@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Checkout() {
   return (
@@ -32,9 +33,9 @@ export default function Checkout() {
                   Review Order{" "}
                   <div className="pull-right">
                     <small>
-                      <a className="afix-1" href="#">
+                      <Link to="/cart" className="afix-1" >
                         Edit Cart
-                      </a>
+                      </Link>
                     </small>
                   </div>
                 </div>
@@ -264,7 +265,15 @@ export default function Checkout() {
                       />
                     </div>
                   </div>
-                </div>
+                </div>{" "}
+                <button
+                  type="button"
+                  className="btn btn-success mt-3 pull-right text-white"
+                >
+                  <Link className="text-white" to="/checkout">
+                    Place Order
+                  </Link>
+                </button>
               </div>
               {/* <!--SHIPPING METHOD END--> */}
               {/* <!--CREDIT CART PAYMENT--> */}
